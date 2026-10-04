@@ -1,0 +1,275 @@
+/* Root layout */
+/* Homepage Background */
+/* src/components/Home.css */
+
+.hc-home-root {
+  min-height: 100vh;
+  /* simple soft gradient as a base; image comes from inline style */
+  background: linear-gradient(
+      135deg,
+      rgba(56, 248, 168, 0.12),
+      rgba(34, 197, 94, 0.05)
+    ),
+    radial-gradient(circle at top left, #e0f2fe 0%, #f9fafb 40%, #e0fdf4 100%);
+  color: #0f172a;
+  font-family: "Segoe UI", system-ui, -apple-system, BlinkMacSystemFont,
+    sans-serif;
+}
+
+
+
+
+
+.hc-navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.7rem 2.4rem;
+  background: rgba(15, 23, 42, 0.96);
+  color: #e5e7eb;
+  box-shadow: 0 1px 8px rgba(15, 23, 42, 0.35);
+}
+
+.hc-logo {
+  display: flex;
+  align-items: center;
+  gap: 0.45rem;
+}
+
+.hc-logo-icon {
+  font-size: 1.5rem;
+}
+
+.hc-logo-text {
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  color: #22c55e;
+}
+
+.hc-menu {
+  display: flex;
+  gap: 1.5rem;
+  font-size: 0.9rem;
+}
+
+.hc-menu-item {
+  color: #e5e7eb;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.hc-menu-item:hover,
+.hc-active {
+  color: #38bdf8;
+}
+
+.hc-auth-buttons {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.hc-btn-login,
+.hc-btn-signup {
+  border: none;
+  font-size: 0.8rem;
+  font-weight: 700;
+  padding: 0.35rem 1rem;
+  border-radius: 999px;
+  cursor: pointer;
+  box-shadow: 0 0 0 1px rgba(148, 163, 184, 0.4);
+}
+
+.hc-btn-login {
+  background: linear-gradient(to bottom, #22c55e, #16a34a);
+  color: #e9f8f8;
+}
+
+.hc-btn-signup {
+  background: linear-gradient(to bottom, #0ea5e9, #0369a1);
+  color: #f9fafb;
+}
+
+/* HERO SECTION */
+
+.hc-hero {
+  display: flex;
+  justify-content: space-between;
+  padding: 3rem 3rem 2.5rem;
+  gap: 2.5rem;
+}
+
+.hc-hero-left {
+  flex: 1.1;
+}
+
+.hc-hero-right {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+.hc-eyebrow {
+  text-transform: uppercase;
+  letter-spacing: 0.16em;
+  font-size: 0.75rem;
+  color: #eaeff1;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+}
+
+.hc-title {
+  font-size: 2.3rem;
+  font-weight: 800;
+  color: #0f172a;
+  margin-bottom: 0.4rem;
+}
+
+.hc-subtitle {
+  font-size: 1.1rem;
+  font-weight: 500;
+  color: #fafcff;
+  max-width: 32rem;
+  margin-bottom: 1.4rem;
+}
+
+/* Highlights list */
+
+.hc-highlights {
+  background: rgba(248, 252, 251, 0.9);
+  border-radius: 20px;
+  padding: 1.2rem 1.5rem;
+  box-shadow: 0 14px 32px rgba(15, 23, 42, 0.12);
+  border: 1px solid rgba(148, 163, 184, 0.4);
+  max-width: 30rem;
+}
+
+.hc-highlights ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  font-size: 0.95rem;
+}
+
+.hc-highlights li {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.45rem;
+  margin-bottom: 0.35rem;
+  color: #111827;
+}
+
+.hc-bullet {
+  color: #16a34a;
+  font-weight: 700;
+  margin-top: 0.08rem;
+}
+
+/* Right card */
+
+.hc-hero-card {
+  width: 320px;
+  background: linear-gradient(145deg, #0ea5e9, #1d4ed8);
+  border-radius: 28px;
+  padding: 1.6rem 1.5rem;
+  color: #eff6ff;
+  box-shadow: 0 20px 40px rgba(15, 23, 42, 0.7);
+}
+
+.hc-hero-icon {
+  font-size: 2.3rem;
+  margin-bottom: 0.6rem;
+}
+
+.hc-hero-card-title {
+  font-size: 1.1rem;
+  font-weight: 700;
+  margin-bottom: 0.4rem;
+}
+
+.hc-hero-card-text {
+  font-size: 0.9rem;
+  line-height: 1.35rem;
+  margin-bottom: 1.1rem;
+}
+
+.hc-hero-stats {
+  display: flex;
+  justify-content: space-between;
+  gap: 0.5rem;
+}
+
+.hc-stat {
+  flex: 1;
+}
+
+.hc-stat-number {
+  display: block;
+  font-size: 0.9rem;
+  font-weight: 700;
+}
+
+.hc-stat-label {
+  display: block;
+  font-size: 0.75rem;
+  opacity: 0.85;
+}
+
+/* Footer info boxes */
+
+.hc-footer-sections {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+  padding: 0 3rem 2.5rem;
+}
+
+.hc-footer-box {
+  flex: 1;
+  min-width: 240px;
+  background: rgba(248, 250, 252, 0.95);
+  border-radius: 18px;
+  padding: 1rem 1.3rem;
+  box-shadow: 0 8px 20px rgba(148, 163, 184, 0.3);
+  border: 1px solid rgba(209, 213, 219, 0.8);
+}
+
+.hc-footer-box h4 {
+  font-size: 1rem;
+  font-weight: 700;
+  margin-bottom: 0.4rem;
+  color: #0f172a;
+}
+
+.hc-footer-box p {
+  font-size: 0.85rem;
+  margin: 0;
+  color: #4b5563;
+}
+
+/* Simple responsiveness */
+
+@media (max-width: 960px) {
+  .hc-hero {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .hc-hero-right {
+    justify-content: flex-start;
+  }
+}
+
+@media (max-width: 720px) {
+  .hc-navbar {
+    padding: 0.6rem 1.2rem;
+  }
+
+  .hc-hero {
+    padding: 2rem 1.5rem 1.8rem;
+  }
+
+  .hc-footer-sections {
+    padding: 0 1.5rem 2rem;
+  }
+}

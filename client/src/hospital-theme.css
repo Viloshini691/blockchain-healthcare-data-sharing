@@ -1,0 +1,217 @@
+/* ------------------------------
+   Hospital UI Theme (CSS only)
+   - No JS/logic changes
+   - Works on top of Bootstrap
+--------------------------------*/
+
+/* Font (calm, clinical) */
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap");
+
+:root {
+  /* Soft hospital palette */
+  --hospital-bg: #f4f8fb;
+  --hospital-card: #ffffff;
+  --hospital-border: #e6eef5;
+
+  /* Brand accents (teal/blue) */
+  --brand-primary: #126e82;  /* deep teal */
+  --brand-primary-600: #0f5c6d;
+  --brand-primary-50: #e8f3f6;
+
+  --brand-success: #2bb673;  /* reassuring green */
+  --brand-warning: #f4b63a;  /* warm amber for actions */
+  --brand-info:    #3aa1f4;
+
+  /* Text colors */
+  --ink: #12324a;        /* headings */
+  --ink-subtle: #4b6476; /* body */
+}
+
+/* Optional: override Bootstrap color variables cleanly */
+:root {
+  --bs-primary: var(--brand-primary);
+  --bs-success: var(--brand-success);
+  --bs-warning: var(--brand-warning);
+  --bs-info: var(--brand-info);
+}
+
+/* Global look */
+html, body {
+  font-family: "Inter", system-ui, -apple-system, Segoe UI, Roboto, "Helvetica Neue", Arial, "Noto Sans", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  color: var(--ink);
+  background:
+    radial-gradient(70rem 70rem at -30% -30%, #ffffff 15%, transparent 40%) no-repeat,
+    radial-gradient(70rem 70rem at 130% 10%, #ffffff 15%, transparent 45%) no-repeat,
+    linear-gradient(180deg, #f7fbff 0%, var(--hospital-bg) 100%);
+  min-height: 100%;
+}
+
+/* Container breathing room */
+.container {
+  max-width: 980px;
+  padding-top: 24px;
+  padding-bottom: 32px;
+}
+
+/* App title */
+h1, .app-title {
+  font-weight: 700;
+  letter-spacing: 0.2px;
+  color: var(--ink);
+  text-align: center;
+  margin-bottom: 24px;
+}
+
+/* Section headings */
+h5 {
+  font-weight: 600;
+  color: var(--ink);
+  margin-bottom: 14px;
+}
+
+/* Cards: clean, soft, clinical */
+.card {
+  border: 1px solid var(--hospital-border);
+  background: var(--hospital-card);
+  border-radius: 14px;
+  box-shadow:
+    0 1px 0 rgba(15, 65, 95, 0.02),
+    0 8px 24px rgba(16, 42, 67, 0.06);
+}
+
+.card.p-3, .card.p-4 {
+  padding: 18px !important;
+}
+
+.card + .card {
+  margin-top: 16px;
+}
+
+/* A subtle left accent bar per card */
+.card::before {
+  content: "";
+  position: absolute;
+  left: -1px;
+  top: 0;
+  bottom: 0;
+  width: 4px;
+  border-radius: 4px 0 0 4px;
+  background: linear-gradient(180deg, var(--brand-primary) 0%, #22a6c5 100%);
+  opacity: 0.85;
+}
+
+/* Inputs feel tidy */
+input[type="text"],
+input[type="number"],
+input[type="file"],
+.form-control {
+  border: 1px solid var(--hospital-border) !important;
+  background: #fff;
+  border-radius: 10px !important;
+  padding: 10px 12px !important;
+  font-size: 0.975rem;
+  color: var(--ink);
+  transition: box-shadow .15s ease, border-color .15s ease;
+}
+
+input[type="file"] {
+  padding: 8px 10px !important;
+}
+
+.form-control:focus {
+  border-color: #b9e4ef !important;
+  box-shadow: 0 0 0 4px rgba(23, 146, 173, 0.12) !important;
+}
+
+/* Informational stripe (your AES Key area uses .alert) */
+.alert {
+  border-radius: 12px;
+  border: 1px solid #d9ecf4;
+  background: #eef8fc;
+  color: #144b5f;
+}
+
+/* Primary actions: rounded, reassuring */
+.btn {
+  border-radius: 12px !important;
+  font-weight: 600;
+  letter-spacing: 0.15px;
+  padding: 11px 16px !important;
+  transition: transform 0.06s ease, filter 0.12s ease, box-shadow 0.12s ease;
+}
+
+.btn:active {
+  transform: translateY(1px);
+}
+
+.btn-primary {
+  background: var(--brand-primary) !important;
+  border-color: var(--brand-primary) !important;
+  box-shadow: 0 8px 20px rgba(18, 110, 130, 0.18);
+}
+.btn-primary:hover {
+  background: var(--brand-primary-600) !important;
+  border-color: var(--brand-primary-600) !important;
+  filter: brightness(1.02);
+}
+
+.btn-warning {
+  background: var(--brand-warning) !important;
+  border-color: var(--brand-warning) !important;
+  color: #27333b !important;
+  box-shadow: 0 8px 20px rgba(244, 182, 58, 0.18);
+}
+.btn-warning:hover {
+  filter: brightness(0.98);
+}
+
+.btn-success {
+  background: var(--brand-success) !important;
+  border-color: var(--brand-success) !important;
+  box-shadow: 0 8px 20px rgba(43, 182, 115, 0.18);
+}
+.btn-success:hover {
+  filter: brightness(0.98);
+}
+
+/* File input & long text wrap areas */
+[style*="wordBreak"],
+.long-text,
+.alert div {
+  word-break: break-word;
+}
+
+/* Section separators look softer */
+hr {
+  border: none;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, #dfeaf2, transparent);
+  margin: 18px 0;
+}
+
+/* Tiny helper text */
+.small, .form-text {
+  color: var(--ink-subtle);
+}
+
+/* Optional: Title underline accent for sections */
+h5::after {
+  content: "";
+  display: block;
+  width: 44px;
+  height: 3px;
+  margin-top: 8px;
+  border-radius: 999px;
+  background: linear-gradient(90deg, var(--brand-primary), #22a6c5);
+  opacity: 0.6;
+}
+.btn-outline-primary {
+  border-color: #9fd1de !important;
+  color: #0F5C6D !important;
+  background: #ffffff !important;
+}
+.btn-outline-success {
+  border-color: #bfe8d3 !important;
+  color: #1b6b4a !important;
+  background: #ffffff !important;
+}
